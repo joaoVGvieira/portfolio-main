@@ -37,7 +37,7 @@ paginaProjetos.addEventListener("click", function(){
 
 
 const titulo = document.querySelector('#quem-sou');
-const texto = "Olá! Prazer Sou João Vitor!!!";
+const texto = "Olá! Sou João!";
 let index = 0;
 let escrevendo = true;
 
@@ -66,5 +66,5 @@ function apagar() {
 
 setInterval(() => {
   escrevendo ? digitar() : apagar();
-}, 220);
+}, 280);
 
