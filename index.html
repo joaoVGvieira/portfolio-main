@@ -1,234 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio João Vieira</title>
+    <title>João Vitor Gonçalves Vieira | Desenvolvedor Full-Stack</title>
     <link rel="icon" href="img/icone-site.png" type="image/png">
-    <link rel="stylesheet" href="style.css">    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">    
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="cabecalho">
-            <p class="paginas" id="pagina-home">Home</p>
-            <p class="paginas" id="pagina-sobre-mim">Sobre mim</p>
-            <p class="paginas" id="pagina-habilidades">Habilidades</p>  
-            <p class="paginas" id="pagina-projetos">Projetos</p>
-        </div>
+        <nav class="nav-bar">
+            <a href="#" class="nav-logo">João Vitor G. Vieira</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#sobre-mim" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-    <div id="container">
+
+    <main id="container">
         
-      <div id="home">
-    <div id="apresentacao">
-        <div>
-            <h1 id="quem-sou">Olá! Sou João!</h1>
-            <h1 class="quem-sou">Estudante de Ciências da Computação</h1>
+      <section id="home">
+        <div id="apresentacao">
+            <div>
+                <h1 id="quem-sou">Olá! Sou João Vitor.</h1>
+                <h2 class="subtitulo-home">Desenvolvedor Full-Stack</h2>
+            </div>
+            <p class="texto-apresentacao">Estudante de Ciência da Computação apaixonado por transformar ideias em soluções robustas. Com experiência em back-end, liderança de equipes e desenvolvimento de projetos premiados, meu objetivo é criar tecnologia que facilite a vida das pessoas.</p>
+            <div class="home-botoes">
+                <a href="curriculo.pdf" download="CV_Joao_Vitor_Vieira.pdf" class="btn btn-primary">Baixar CV <i class="fa-solid fa-download"></i></a>
+                <div class="home-redes-sociais">
+                    <a href="https://www.linkedin.com/in/joao-vg-vieira/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/joaoVGvieira" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
         </div>
-        <p class="texto-apresentacao">Estudante de Ciências da Computação na Universidade Federal de Viçosa (UFV), com foco em desenvolvimento web. Tenho experiência prática em projetos educacionais com Java, JavaScript e tecnologias front-end , além de atuar como Vice-Presidência de Gente e Gestão(VPGG) em empresa júnior, gerenciando processos internos e liderando o planejamento estratégico. Sou apaixonado por resolver problemas lógicos e busco uma oportunidade para aplicar meus conhecimentos em um ambiente de desenvolvimento ágil e colaborativo.</p>
-    </div>
-    <div id="img-apresentacao">
-        <img src="img/fotos/joaoFoto.jpeg" alt="Foto de João Vitor">
-    </div>
-</div>
+        <div id="img-apresentacao">
+            <img src="img/fotos/joaoFoto.jpg" alt="Foto de João Vitor">
+        </div>
+      </section>
 
-<div id="sobre-mim">
-    <h1>Sobre mim</h1>
-    <p>Sou estudante de Ciências da Computação 8º e ultimo periodo na UFV, onde desenvolvi habilidades sólidas em linguagens como Python, Java, JavaScript, HTML e CSS, além de frameworks como ReactJS e Node.js. Tenho familiaridade com metodologias ágeis como SCRUM, que aplico na gestão de processos e reuniões semanais na empresa júnior do curso.</p>
-    <p>Minha paixão por resolver problemas lógicos me impulsionou desde testes matemáticos até desafios de programação. Meus principais interesses englobam as áreas de desenvolvimento web, incluindo back-end e front-end , e a criação de jogos, como o projeto "Largatinha Aventureira", onde fui responsável pela parte visual e criação de telas em Java com LITlengine, resultando no prêmio de melhor projeto integrado do ano.</p>
-    <p>Busco uma oportunidade na área de tecnologia, especialmente em empresas que valorizam a inovação. Desejo aplicar minhas habilidades em JavaScript, desenvolvimento web e liderança para contribuir com soluções estratégicas e de impacto. Estou pronto para enfrentar novos desafios, desenvolver novas habilidades e trabalhar em equipe, sempre buscando o aprendizado contínuo.</p>
-</div>
-        <div id="habilidades">
-            <h1>Habilidades</h1>
-            <div id="tecnologias">
-                <div class="tecnologia">
-                    <img src="img/logos/logo-html.png" alt="HTML">
-                    <p>HTML</p>
-                </div>
-                <div class="tecnologia">
-                    <img src="img/logos/logo-css.png" alt="">
-                    <p>CSS</p>
-                </div>
-                <div class="tecnologia">
-                    <img src="img/logos/logo-js.png" alt="">
-                    <p>JavaScript</p>
-                </div>
-                <div class="tecnologia">
-                    <img src="img/logos/logo-Csharp.png" alt="">
-                    <p>C#</p>
-                </div>
+      <section id="sobre-mim" class="section-hidden">
+          <h1>Sobre Mim</h1>
+          <p>Estou no último período de Ciência da Computação na UFV, onde construí uma base sólida em linguagens como Python, Java e JavaScript, e frameworks como React e Node.js. Minha paixão por resolver problemas lógicos me guia desde os primeiros desafios acadêmicos até a liderança de projetos complexos.</p>
+          <p>Na empresa júnior SetApp, atuo como Vice-Presidente, aplicando metodologias ágeis para gerenciar processos e liderar o planejamento estratégico. Essa experiência me ensinou a equilibrar a gestão de equipes com a mentoria técnica, realizando code reviews e garantindo a qualidade das entregas.</p>
+          <p>Busco uma oportunidade para aplicar minhas habilidades em um ambiente inovador, contribuindo com soluções de impacto e continuando meu aprendizado em desenvolvimento de software.</p>
+      </section>
+      
+      <section id="habilidades" class="section-hidden">
+          <h1>Habilidades</h1>
+          <div id="tecnologias">
+              <div class="tecnologia"><img src="img/logos/logo-html.png" alt="HTML"><p>HTML</p></div>
+              <div class="tecnologia"><img src="img/logos/logo-css.png" alt="CSS"><p>CSS</p></div>
+              <div class="tecnologia"><img src="img/logos/logo-js.png" alt="JavaScript"><p>JavaScript</p></div>
+              <div class="tecnologia"><img src="img/logos/pyhon.png" alt="Python"><p>Python</p></div>
+              <div class="tecnologia"><img src="img/logos/logo-java.png" alt="Java"><p>Java</p></div>
+              <div class="tecnologia"><img src="img/logos/logo-Csharp.png" alt="C#"><p>C#</p></div>
+              <div class="tecnologia"><img src="img/logos/laravel.png" alt="PHP"><p>PHP</p></div>
+              <div class="tecnologia"><img src="img/logos/mysql-logo.png" alt="MySQL"><p>MySQL</p></div>
+              <div class="tecnologia"><img src="img/logos/firebase.png" alt="Firebase"><p></p></div>
+              <div class="tecnologia"><img src="img/logos/logo-litiengine.png" alt="Litiengine"><p>Litiengine</p></div>
+              <div class="tecnologia"><img src="img/logos/logo-php.png" alt="PHP"><p>PHP</p></div>
+          </div>
+      </section>
 
-                  <div class="tecnologia">
-                        <img src="img/logos/logo-litiengine.png" alt="">
-                        <p>Litiengine</p>
+      <section id="projetos" class="section-hidden">
+          <h1 id="titulo-projeto">Projetos</h1>
+
+          <div class="projeto">
+              <div class="imagem-projeto">
+                <img src="img/gifs/largatinha-gif.gif" alt="GIF do jogo Lagartinha Aventureira">
+              </div>
+              <div class="informacoes-projeto">
+                  <h2 class="titulo-projeto">Lagartinha Aventureira</h2>
+                  <p class="descricao-projeto">Jogo educativo desenvolvido em Java com a biblioteca Litiengine. Fui responsável pelo design visual e desenvolvimento das telas. O projeto foi premiado como <strong>Melhor Projeto Integrado do Ano (2024)</strong>, consolidando a qualidade da entrega e o trabalho em equipe.</p>
+                  <div class="tecnologias-usadas">
+                      <span>Java</span>
+                      <span>MySQL</span>
+                      <span>Litiengine</span>
                   </div>
-                  <div class="tecnologia">
-                    <img src="img/logos/laravel.png" alt="">
-                    <p>Laravel</p>
-                </div>
-            </div>
-            <div id="tecnologias">
-                <div class="tecnologia">
-                    <img src="img/logos/logo-java.png" alt="">
-                    <p>Java</p>
-                </div>
-                <div class="tecnologia">
-                    <img src="img/logos/logo-c.png" alt="">
-                    <p>C</p>
-                </div>
-                <div class="tecnologia">
-                    <img src="img/logos/mysql-logo.png" alt="">
-                    <p>MySql</p>
-                </div>
-                
-                 <div class="tecnologia">
-                    <img src="img/logos/pyhon.png" alt="">
-                    <p>Python</p>
-                </div>
-                <div class="tecnologia">
-                    <img src="img/logos/c++.png" alt="">
-                    <p>C++</p>
-                </div>
-                 <div class="tecnologia">
-                    <img src="img/logos/firebase.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div id="projetos">
+                  <div class="projeto-links">
+                      <a href="https://www.linkedin.com/in/joao-vg-vieira/" target="_blank">Saber Mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="projeto reverse">
+              <div class="imagem-projeto">
+                <img src="img/gifs/girtrunfo.gif" alt="GIF do jogo Super Trunfo">
+              </div>
+              <div class="informacoes-projeto">
+                  <h2 class="titulo-projeto">Super Trunfo - League of Legends</h2>
+                  <p class="descricao-projeto">Projeto inspirado na Imersão Dev da Alura, unindo minha paixão por League of Legends e programação. A aplicação foi desenvolvida com HTML, CSS e JavaScript puros, com foco na manipulação do DOM e lógica de jogo. Refatorei o código original para incluir novas funcionalidades.</p>
+                  <div class="tecnologias-usadas">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>JavaScript</span>
+                  </div>
+                  <div class="projeto-links">
+                      <a href="https://joaovgvieira.github.io/Super-Trunfo-League-of-Legends-joao/" target="_blank" class="btn-projeto">Ver Online <i class="fa-solid fa-gamepad"></i></a>
+                      <a href="https://github.com/joaoVGvieira/Super-Trunfo-League-of-Legends-joao" target="_blank" class="btn-projeto-outline">Ver Código <i class="fa-brands fa-github"></i></a>
+                  </div>
+              </div>
+          </div>
 
-            <h1 id="titulo-projeto">Projetos</h1>
-
-            <div class="projeto">
-                <img class="imagem-projeto" src="img/gifs/largatinha-gif.gif" alt="">
-                <div class="informacoes-projeto">
-                    <h1 class="titulo-projeto">Lagartinha Aventureira</h1>
-                    <p class="descricao-projeto">Lagartinha Aventureira foi um projeto desenvolvido durante minha jornada acadêmica, no qual criei um jogo utilizando Java, MySQL e a biblioteca Litiengine. </p>
-                    <div class="redes-sociais">
-                        <a href="http://www.linkedin.com/in/joao-vg-vieira" target="_blank"><i class="fa-brands fa-linkedin" title="Linkedin"></i></a>
-                    </div>
-                    <div class="tecnologias-projeto">
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-java.png" alt="">
-                            <p>Java</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/mysql-logo.png" alt="">
-                            <p>MySql</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-litiengine.png" alt="">
-                            <p>Litiengine</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="projeto">
-                <img class="imagem-projeto" src="img/gifs/girtrunfo.gif" alt="">
-                <div class="informacoes-projeto">
-                    <h1 class="titulo-projeto">Super Trunfo League Of Legends</h1>
-                    <p class="descricao-projeto">O Super Trunfo League of Legends é um projeto que desenvolvi inspirado na Imersão Dev da Alura. Como um grande fã do jogo League of Legends, aproveitei a oportunidade para unir diversão e aprendizado. Refatorei algumas funções do projeto original e adicionei a funcionalidade de reiniciar o jogo, aprimorando a experiência que havia sido criada inicialmente no CodePen.</p>
-                    <div class="redes-sociais">
-                        <a href="https://www.linkedin.com/in/joao-vg-vieira/" target="_blank"><i class="fa-brands fa-linkedin" title="Linkedin"></i></a>
-                        <a href="https://github.com/joaoVGvieira/Super-Trunfo-League-of-Legends-joao" target="_blank"><i class="fa-brands fa-square-github" title="GitHub"></i></a>
-                        <a href="https://joaovgvieira.github.io/Super-Trunfo-League-of-Legends-joao/" target="_blank"><i class="fa-solid fa-gamepad" title="Testar"></i></a>
-                    </div>
-                    <div class="tecnologias-projeto">
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-html.png" alt="">
-                            <p>HTML</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-css.png" alt="">
-                            <p>CSS</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-js.png" alt="">
-                            <p>JS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          <div class="projeto">
+              <div class="imagem-projeto">
+                <img src="img/gifs/Planilha-de-Treinos.gif" alt="GIF da Ficha de Treino">
+              </div>
+              <div class="informacoes-projeto">
+                  <h2 class="titulo-projeto">Ficha de Treino Pessoal</h2>
+                  <p class="descricao-projeto">Aplicação web para organizar e registrar treinos de forma prática. O projeto foi uma excelente oportunidade para aprimorar minhas habilidades em front-end e praticar a integração com o Firebase, que atua como banco de dados em tempo real para armazenar os dados.</p>
+                  <div class="tecnologias-usadas">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+                  </div>
+                  <div class="projeto-links">
+                      <a href="https://joaovgvieira.github.io/Treino-Ficha/" target="_blank" class="btn-projeto">Ver Online <i class="fa-solid fa-gamepad"></i></a>
+                  </div>
+              </div>
+          </div>
 
              <div class="projeto">
-                <div class="informacoes-projeto">
-                   <h1 class="titulo-projeto">Ficha de Treino Pessoal</h1>
-                    <p class="descricao-projeto">
-                    Este projeto é uma página web que desenvolvi para organizar e registrar meus treinos de forma prática e acessível. Criei essa aplicação com o objetivo de facilitar o acompanhamento dos meus exercícios, tempos de descanso e anotações específicas para cada treino. Além de aprimorar minhas habilidades em HTML, CSS e JavaScript, também utilizei o Firebase como banco de dados para armazenar as informações da minha ficha de treino de forma segura e em tempo real. Foi uma ótima oportunidade para praticar integração com backend e melhorar a usabilidade de uma ferramenta feita para meu próprio uso.
-                    </p>
+              <div class="imagem-projeto">
+                <img src="img/gifs/Prhima.gif" alt="Interface do site PRHIMA">
+              </div>
+              <div class="informacoes-projeto">
+                  <h2 class="titulo-projeto">Site Web (PRHIMA)</h2>
+                  <p class="descricao-projeto">Como desenvolvedor full-stack, criei soluções web para a PRHIMA, focando no desenvolvimento do back-end com <strong>PHP</strong> para lógicas de negócio e APIs. Realizei a integração com bancos de dados <strong>MySQL e PostgreSQL</strong> e construí o front-end com <strong>HTML, CSS e JavaScript</strong>.</p>
+                  <div class="tecnologias-usadas">
+                      <span>PHP</span>
+                      <span>JavaScript</span>
+                      <span>MySQL</span>
+                      <span>PostgreSQL</span>
+                      <span>HTML/CSS</span>
+                  </div>
+                  <div class="projeto-links">
+                      <a href="https://prhima.com.br/index.php" target="_blank" class="btn-projeto">Ver Site Online <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      
+                      </div>
+              </div>
+          </div>
+      </section>
 
-                    <div class="redes-sociais">
-                        <a href="http://www.linkedin.com/in/joao-vg-vieira" target="_blank" ><i class="fa-brands fa-linkedin" title="Linkedin"></i></a>
-                        <a href="https://joaovgvieira.github.io/Treino-Ficha/" target="_blank"><i class="fa-solid fa-gamepad" title="Testar"></i></a>
-                    </div>
-                    <div class="tecnologias-projeto">
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-html.png" alt="">
-                            <p>HTML</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-css.png" alt="">
-                            <p>CSS</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-js.png" alt="">
-                            <p>JS</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/firebase.png" alt="">
-                            <p>Firebase</p>
-                        </div>
-                    </div>
-                </div>
-                <img class="imagem-projeto" src="img/gifs/Planilha-de-Treinos.gif" alt="">
+      <section id="contato" class="section-hidden">
+        <h1>Vamos Conversar!</h1>
+        <p>Estou sempre aberto a novas oportunidades e desafios. Se você gostou do meu trabalho ou tem alguma pergunta, sinta-se à vontade para entrar em contato.</p>
+        <div class="contato-info">
+            <div class="contato-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:joaovitorgv2019@gmail.com">joaovitorgv2019@gmail.com</a>
             </div>
-
-
-
-
-
-             <div class="projeto">
-                <img class="imagem-projeto" src="img/gifs/Tela-inicial.gif" alt="">
-                <div class="informacoes-projeto">
-                    <h1 class="titulo-projeto">Jogo Mata Mosquito</h1>
-                    <p class="descricao-projeto">
-                    Desenvolvi o Jogo Mata Mosquito como uma forma dinâmica e divertida de aprimorar meus conhecimentos em JavaScript, CSS e HTML. O jogo desafia o jogador a clicar nos mosquitos que aparecem aleatoriamente na tela antes que desapareçam. Com diferentes níveis de dificuldade, sistema de vidas e cronômetro, essa aplicação foi uma ótima oportunidade para praticar lógica de programação, manipulação do DOM e criação de interfaces interativas.
-                    </p>
-
-                    <div class="redes-sociais">
-                        <a href="https://www.linkedin.com/in/joao-vg-vieira/" target="_blank"><i class="fa-brands fa-linkedin" title="Linkedin"></i></a>
-                        <a href="https://joaovgvieira.github.io/game_mosquito/index.html" target="_blank"><i class="fa-solid fa-gamepad" title="Testar"></i></a>
-                    </div>
-                    <div class="tecnologias-projeto">
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-html.png" alt="">
-                            <p>HTML</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-css.png" alt="">
-                            <p>CSS</p>
-                        </div>
-                        <div class="tecnologia-projeto">
-                            <img src="img/logos/logo-js.png" alt="">
-                            <p>JS</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="contato-item">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+5531983519044">(31)98351-9044</a>
             </div>
-
-
-
-
         </div>
-    </div>
-    </div>
+        <div class="contato-redes-sociais">
+            <a href="https://www.linkedin.com/in/joao-vg-vieira/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/joaoVGvieira" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </section>
+    </main>
+
+
+
+
+    <footer>
+        <p>&copy; 2025 - Desenvolvido por João Vitor Gonçalves Vieira</p>
+    </footer>
 
 </body>
 </html>

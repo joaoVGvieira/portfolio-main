@@ -1,70 +1,60 @@
-// Botoes menu
-const paginaHome = document.querySelector('#pagina-home');
-const paginaSobreMim = document.querySelector('#pagina-sobre-mim');
-const paginaHabilidades = document.querySelector('#pagina-habilidades');
-const paginaProjetos = document.querySelector('#pagina-projetos');
+document.addEventListener("DOMContentLoaded", function() {
 
-//Botoes projeto
-const botaoAbreFacelita = document.querySelector("#botao-facelita");
-const botaoFechaFacelita = document.querySelector("#x");
+    // NAVEGAÇÃO SUAVE
+    const navLinks = document.querySelectorAll('.nav-link');
 
-//Divs
-const divHome = document.querySelector('#home');
-const divSobreMim = document.querySelector('#sobre-mim');
-const divHabilidades = document.querySelector('#habilidades');
-const divProjetos = document.querySelector('#projetos');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
 
-//Popup
-const popupsDiv = document.querySelector("#popups");
-const popupFacelita = document.querySelector(".popup-facelita");
+    // ANIMAÇÃO DE DIGITAÇÃO
+    const titulo = document.querySelector('#quem-sou');
+    const textoOriginal = "Olá! Sou João Vitor.";
+    let index = 0;
+    let isDeleting = false;
 
-paginaHome.addEventListener("click", function(){
-    divHome.scrollIntoView({ behavior: 'smooth' });
-})
+    function typeEffect() {
+        const currentText = textoOriginal.substring(0, index);
+        titulo.textContent = currentText + (isDeleting ? '' : '|');
 
-paginaSobreMim.addEventListener("click", function(){
-  divSobreMim.scrollIntoView({ behavior: 'smooth' });
-})
-
-paginaHabilidades.addEventListener("click", function(){
-  divHabilidades.scrollIntoView({ behavior: 'smooth' });
-})
-
-paginaProjetos.addEventListener("click", function(){
-  divProjetos.scrollIntoView({ behavior: 'smooth' });
-})
-
-
-
-const titulo = document.querySelector('#quem-sou');
-const texto = "Olá! Sou João!";
-let index = 0;
-let escrevendo = true;
-
-function digitar() {
-  if (escrevendo) {
-    if (index < texto.length) {
-      titulo.textContent = texto.slice(0, index + 1) + "|";
-      index++;
-    } else {
-      escrevendo = false;
-      setTimeout(() => apagar(), 1000);
+        if (!isDeleting && index < textoOriginal.length) {
+            index++;
+            setTimeout(typeEffect, 150);
+        } else if (isDeleting && index > 0) {
+            index--;
+            setTimeout(typeEffect, 100);
+        } else {
+            isDeleting = !isDeleting;
+            setTimeout(typeEffect, 1200); // Pausa antes de começar a apagar/redigitar
+        }
     }
-  }
-}
-
-function apagar() {
-  if (!escrevendo) {
-    if (index > 0) {
-      titulo.textContent = texto.slice(0, index - 1) + "|";
-      index--;
-    } else {
-      escrevendo = true;
+    
+    // Inicia o efeito apenas se o elemento existir
+    if(titulo) {
+       typeEffect();
     }
-  }
-}
 
-setInterval(() => {
-  escrevendo ? digitar() : apagar();
-}, 280);
+    // ANIMAÇÃO AO ROLAR (FADE IN)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible');
+                observer.unobserve(entry.target); // Opcional: para a animação não repetir
+            }
+        });
+    }, {
+        threshold: 0.1 // A animação começa quando 10% do elemento estiver visível
+    });
 
+    const hiddenElements = document.querySelectorAll('.section-hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+});
