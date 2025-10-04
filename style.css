@@ -388,3 +388,86 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* =================================== */
+/* ===== MEDIA QUERIES (CELULAR) ===== */
+/* =================================== */
+
+@media (max-width: 768px) {
+    
+    /* GERAL */
+    section {
+        padding: 80px 5%; /* Diminui o espaçamento lateral e vertical */
+    }
+
+    /* HEADER E NAVEGAÇÃO */
+    .nav-menu {
+        /* Futuramente, aqui entraria o código para um menu "hambúrguer" */
+        /* Por agora, vamos apenas reduzir o espaçamento para caber */
+        gap: 20px; 
+    }
+    
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    /* SEÇÃO HOME */
+    #home {
+        flex-direction: column; /* Coloca o texto em cima da imagem */
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    #apresentacao {
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    #quem-sou {
+        font-size: 2.5rem; /* Diminui o tamanho da fonte principal */
+    }
+
+    .subtitulo-home {
+        font-size: 1.5rem;
+    }
+
+    .home-botoes {
+        justify-content: center; /* Centraliza os botões */
+    }
+
+    #img-apresentacao {
+        width: 280px;  /* Diminui o tamanho da foto */
+        height: 280px;
+        margin-top: 2rem;
+    }
+
+    /* SEÇÃO HABILIDADES */
+    .tecnologia {
+        width: 120px; /* Diminui um pouco o card de tecnologia */
+        height: 120px;
+    }
+
+    .tecnologia img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* SEÇÃO PROJETOS */
+    .projeto, .projeto.reverse {
+        flex-direction: column; /* Coloca a imagem em cima do texto */
+        gap: 2rem;
+    }
+
+    .imagem-projeto, .informacoes-projeto {
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    /* SEÇÃO CONTATO */
+    .contato-info {
+        flex-direction: column; /* Coloca o e-mail e telefone um embaixo do outro */
+        gap: 1.5rem;
+    }
+}
