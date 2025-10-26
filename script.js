@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(typeEffect, 100);
         } else {
             isDeleting = !isDeleting;
-            setTimeout(typeEffect, 1200); // Pausa antes de começar a apagar/redigitar
+            setTimeout(typeEffect, 1200); 
         }
     }
     
-    // Inicia o efeito apenas se o elemento existir
+  
     if(titulo) {
        typeEffect();
     }
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('section-visible');
-                observer.unobserve(entry.target); // Opcional: para a animação não repetir
+                observer.unobserve(entry.target); 
             }
         });
     }, {
-        threshold: 0.1 // A animação começa quando 10% do elemento estiver visível
+        threshold: 0.1 
     });
 
     const hiddenElements = document.querySelectorAll('.section-hidden');
