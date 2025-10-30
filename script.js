@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (filtro === undefined) { 
                         card.classList.remove('projeto-filtrado');
                     } else {
-                        if (techsDoCard && techsDoCard.includes(filtro)) {
+                        if (techsDoCard && techsDoCard.split(' ').includes(filtro)) {
                             card.classList.remove('projeto-filtrado');
                         } else {
                             card.classList.add('projeto-filtrado');
