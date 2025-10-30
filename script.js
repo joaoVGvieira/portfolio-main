@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // NAVEGAÇÃO SUAVE
     const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // ANIMAÇÃO DE DIGITAÇÃO
     const titulo = document.querySelector('#quem-sou');
     const textoOriginal = "Olá! Sou João Vitor.";
     let index = 0;
@@ -27,22 +25,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!isDeleting && index < textoOriginal.length) {
             index++;
-            setTimeout(typeEffect, 150);
+            setTimeout(typeEffect, 200);
         } else if (isDeleting && index > 0) {
             index--;
-            setTimeout(typeEffect, 100);
+            setTimeout(typeEffect, 230);
         } else {
             isDeleting = !isDeleting;
-            setTimeout(typeEffect, 1200); 
+            setTimeout(typeEffect, 2000); 
         }
     }
     
-  
     if(titulo) {
        typeEffect();
     }
 
-    // ANIMAÇÃO AO ROLAR (FADE IN)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -57,4 +53,80 @@ document.addEventListener("DOMContentLoaded", function() {
     const hiddenElements = document.querySelectorAll('.section-hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 
+
+    function setupFiltroProjetos() {
+        const skillCards = document.querySelectorAll('#habilidades .tecnologia');
+        const projectCards = document.querySelectorAll('#projetos .projeto');
+        
+        const projetosSection = document.querySelector('#projetos');
+
+        skillCards.forEach(skill => {
+            skill.addEventListener('click', () => {
+                
+                const filtro = skill.dataset.tech;
+                
+                skillCards.forEach(s => {
+                    s.classList.remove('filtro-ativo');
+                    s.classList.add('filtro-inativo');
+                });
+                skill.classList.add('filtro-ativo');
+                skill.classList.remove('filtro-inativo');
+
+                projectCards.forEach(card => {
+                    const techsDoCard = card.dataset.tech;
+                    
+                    if (filtro === undefined) { 
+                        card.classList.remove('projeto-filtrado');
+                    } else {
+                        if (techsDoCard && techsDoCard.includes(filtro)) {
+                            card.classList.remove('projeto-filtrado');
+                        } else {
+                            card.classList.add('projeto-filtrado');
+                        }
+                    }
+                });
+
+                if (projetosSection) {
+                    projetosSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+
+            });
+        });
+    }
+
+    setupFiltroProjetos();
+
 });
+
+function setupFiltroProjetos() {
+    const skillCards = document.querySelectorAll('#habilidades .tecnologia');
+    const projectCards = document.querySelectorAll('#projetos .projeto');
+
+    skillCards.forEach(skill => {
+        skill.addEventListener('click', () => {
+            const filtro = skill.dataset.tech;
+            
+            skillCards.forEach(s => {
+                s.classList.remove('filtro-ativo');
+                s.classList.add('filtro-inativo');
+            });
+            skill.classList.add('filtro-ativo');
+            skill.classList.remove('filtro-inativo');
+
+            projectCards.forEach(card => {
+                const techsDoCard = card.dataset.tech;
+                
+                if (filtro === undefined) { 
+                    card.classList.remove('projeto-filtrado');
+                } else {
+                    if (techsDoCard && techsDoCard.includes(filtro)) {
+                        card.classList.remove('projeto-filtrado');
+                    } else {
+                        card.classList.add('projeto-filtrado');
+                    }
+                }
+            });
+        });
+    });
+}
+

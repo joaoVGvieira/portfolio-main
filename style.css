@@ -369,7 +369,6 @@ header {
     transform: scale(1.2);
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -377,7 +376,6 @@ footer {
     margin-top: 50px;
 }
 
-/* ANIMAÇÕES */
 .section-hidden {
     opacity: 0;
     transform: translateY(50px);
@@ -389,21 +387,16 @@ footer {
     transform: translateY(0);
 }
 
-/* =================================== */
-/* ===== MEDIA QUERIES (CELULAR) ===== */
-/* =================================== */
+
 
 @media (max-width: 768px) {
     
-    /* GERAL */
     section {
-        padding: 80px 5%; /* Diminui o espaçamento lateral e vertical */
+        padding: 80px 5%; 
     }
 
-    /* HEADER E NAVEGAÇÃO */
     .nav-menu {
-        /* Futuramente, aqui entraria o código para um menu "hambúrguer" */
-        /* Por agora, vamos apenas reduzir o espaçamento para caber */
+
         gap: 20px; 
     }
     
@@ -415,19 +408,18 @@ footer {
         font-size: 0.9rem;
     }
 
-    /* SEÇÃO HOME */
     #home {
-        flex-direction: column; /* Coloca o texto em cima da imagem */
+        flex-direction: column;
         text-align: center;
         margin-top: 100px;
     }
 
     #apresentacao {
-        width: 100%; /* Ocupa toda a largura */
+        width: 100%; 
     }
 
     #quem-sou {
-        font-size: 2.5rem; /* Diminui o tamanho da fonte principal */
+        font-size: 2.5rem; 
     }
 
     .subtitulo-home {
@@ -435,18 +427,17 @@ footer {
     }
 
     .home-botoes {
-        justify-content: center; /* Centraliza os botões */
+        justify-content: center; 
     }
 
     #img-apresentacao {
-        width: 280px;  /* Diminui o tamanho da foto */
+        width: 280px;  
         height: 280px;
         margin-top: 2rem;
     }
 
-    /* SEÇÃO HABILIDADES */
     .tecnologia {
-        width: 120px; /* Diminui um pouco o card de tecnologia */
+        width: 120px; 
         height: 120px;
     }
 
@@ -455,19 +446,54 @@ footer {
         height: 50px;
     }
 
-    /* SEÇÃO PROJETOS */
+
     .projeto, .projeto.reverse {
-        flex-direction: column; /* Coloca a imagem em cima do texto */
+        flex-direction: column; 
         gap: 2rem;
     }
 
     .imagem-projeto, .informacoes-projeto {
-        width: 100%; /* Ocupa toda a largura */
+        width: 100%; 
     }
 
-    /* SEÇÃO CONTATO */
     .contato-info {
-        flex-direction: column; /* Coloca o e-mail e telefone um embaixo do outro */
+        flex-direction: column; 
         gap: 1.5rem;
     }
+}
+
+.tecnologia {
+    cursor: pointer;
+}
+
+.tecnologia.filtro-ativo {
+    transform: translateY(-10px) scale(1.1);
+    border-color: var(--primary-green);
+    box-shadow: 0 10px 20px rgba(2, 188, 62, 0.3);
+}
+
+.tecnologia.filtro-inativo {
+    opacity: 0.4;
+    transform: scale(0.9);
+}
+
+.projeto.projeto-filtrado {
+    opacity: 0;
+    transform: scale(0.9);
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-width: 0; 
+}
+
+.filtro-instrucao {
+    text-align: center;
+    max-width: 600px;
+    margin: -2rem auto 3rem auto; 
+    font-size: 1.2rem;           
+    font-style: italic;         
+    opacity: 0.9;              
+    color: var(--light-gray);
 }
